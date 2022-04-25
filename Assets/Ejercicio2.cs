@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class Ejercicio2 : MonoBehaviour
 {
 
-    string contraseñacor;
-    string contraseña;
+    string contraseniaCorrecta;
+    string contraseniaUsuario;
     public Text texto;
-    public Text ingreso;
-    public GameObject mensaje;
+    public Text ingresoUsuario;
+    public GameObject cartelitoMjs;
 
     // Start is called before the first frame update
     void Start()
     {
-        contraseñacor = "12345";
-        mensaje.SetActive(false);
+        contraseniaCorrecta = "12345";
+        cartelitoMjs.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,16 +27,16 @@ public class Ejercicio2 : MonoBehaviour
 
     public void validarContrasenia()
     {
-        contraseña = ingreso.text;
-        if (contraseña == contraseñacor)
+        contraseniaUsuario = ingresoUsuario.text;
+        if (contraseniaUsuario == contraseniaCorrecta)
         {
-            mensaje.SetActive(true);
+            cartelitoMjs.SetActive(true);
             texto.text = "Bienvenido";
             Debug.Log("Bienvenido");
         }
         else
         {
-            mensaje.SetActive(true);
+            cartelitoMjs.SetActive(true);
             texto.text = "Contraseña incorrecta";
             Debug.Log("Contraseña incorrecta");
         }
